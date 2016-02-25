@@ -30,8 +30,8 @@ gulp.task('browser-sync', function() {
             name: 'dev',
             baseDir: paths.browserSync.baseDir
         },
-        browser: "firefox",
-        port: 3500,
+
+        port: 3000,
         ui: {
             port: 3011
         },

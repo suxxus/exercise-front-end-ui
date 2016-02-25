@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:suxxus/exercise-platform-ui.git"
+    "url": "git@github.com:suxxus/exercise-front-end-ui.git"
   },
   "description": "exercise to study and testing different technologies to develop a webapp",
   "scripts": {
