@@ -1,0 +1,16 @@
+.metric-card {
+    .card {
+        margin: inherit;
+        margin-bottom: 1em;
+        &:focus,
+        &:hover {
+            cursor: default;
+            img {
+                opacity: 1;
+            }
+        }
+        .card-image {
+            background-color: $metrics-violet
+        }
+    }
+}

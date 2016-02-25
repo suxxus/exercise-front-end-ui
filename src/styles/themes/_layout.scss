@@ -1,0 +1,61 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family: 'Raleway', sans-serif;
+    color: $metrics-color;
+    cursor: default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: $metrics-color;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+button {
+    padding: .5em;
+    background-color: #311240;
+    color: #fff;
+    border-style: inherit;
+}
+
+.tooltip {
+    p {
+        font-size: 10px;
+        font-size: 1.0rem;
+    }
+}

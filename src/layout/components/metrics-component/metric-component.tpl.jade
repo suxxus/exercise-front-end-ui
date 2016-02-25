@@ -1,0 +1,33 @@
+div.metric-component
+
+  div.mc-header
+   div.right.show
+    include ../metric-subcomp/label.tpl.jade
+
+   div.left
+    include ../metric-subcomp/delete-button.tpl.jade
+
+  div.mc-edit
+    div.mobile
+     include ../metric-subcomp/select-metric-type-mobile.tpl.jade
+
+    include ../metric-subcomp/actions-btns.tpl.jade
+
+  div.mc-chart
+   include ../metric-subcomp/metric-card.tpl.jade
+    block image
+
+     div#msg-success.msgs
+      include ../metric-subcomp/message-success.tpl.jade
+
+     div#msg-warning.msgs
+      include ../metric-subcomp/message-warning.tpl.jade
+
+     ul#charts-cont.img-cont.show-pie
+      li.pie
+      li.line
+      li.area
+
+  div.mc-footer
+   div.metadata
+    include ../metric-subcomp/info.tpl.jade

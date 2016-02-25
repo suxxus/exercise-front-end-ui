@@ -1,0 +1,36 @@
+{
+  "name": "exercise-platform-ui",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:suxxus/exercise-platform-ui.git"
+  },
+  "description": "exercise to study and testing different technologies to develop a webapp",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "gulp dev",
+    "dist": "gulp dist",
+    "check": "npm outdated --depth=0",
+    "postinstall": "gulp dist"
+  },
+  "author": "DIEGO <diegoriez@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-watch": "^4.3.5",
+    "path": "^0.12.7",
+    "run-sequence": "^1.1.5"
+  },
+  "dependencies": {
+    "bourbon": "^4.2.6",
+    "node-neat": "^1.7.2"
+  },
+  "engines": {
+    "node": "5.0"
+  }
+}

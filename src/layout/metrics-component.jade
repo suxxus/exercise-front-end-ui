@@ -1,0 +1,21 @@
+extends ./base/base.tpl.jade
+block content
+ div.comps-container
+  h2 metric component
+
+ div.comp-wrapper
+  include ./components/metrics-component/metric-component.tpl.jade
+
+  include ./components/components-scripts-test/component-metric.scripts.jade
+
+  include ./components/components-scripts-test/component-accordion.scripts.jade
+
+block footer
+ .expander.html-code-container
+  a.expander-trigger.expander-hidden(href="javascript:void(0)") HTML source
+  .expander-content
+   pre.prettyprint.lang-html
+    code &lt;div class="metric-component"&gt;&lt;div class="mc-header"&gt;&lt;div class="right show"&gt;&lt;div class="metric-name"&gt;&lt;div class="name show"&gt;&lt;span class="label"&gt;metric name&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="left"&gt;&lt;button id="delete-metric" type="button" class="deletemetric"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="mc-edit"&gt;&lt;div class="mobile"&gt;&lt;ul class="accordion select-mobile"&gt;&lt;li&gt;&lt;a href="javascript:void(0)" class="js-accordion-trigger"&gt;Select Chart type&lt;/a&gt;&lt;ul class="submenu"&gt;&lt;li id="pie"&gt;&lt;a href="javascript:void(0)"&gt;&lt;i class="fa fa-pie-chart"&gt;&lt;/i&gt;&lt;span&gt;pie type&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li id="line"&gt;&lt;a href="javascript:void(0)"&gt;&lt;i class="fa fa-line-chart"&gt;&lt;/i&gt;&lt;span&gt;line type&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li id="area"&gt;&lt;a href="javascript:void(0)"&gt;&lt;i class="fa fa-area-chart"&gt;&lt;/i&gt;&lt;span&gt;area type&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class="metric-actions-btns"&gt;&lt;div class="wrapper"&gt;&lt;div id="cancel" class="left"&gt;&lt;button type="button"&gt;cancel&lt;/button&gt;&lt;/div&gt;&lt;div id="save" class="right"&gt;&lt;button type="button"&gt;save&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="mc-chart"&gt;&lt;div class="metric-card"&gt;&lt;div class="cards"&gt;&lt;div class="card"&gt;&lt;div class="card-header"&gt;header&lt;/div&gt;&lt;div class="card-image"&gt;&lt;div id="msg-success" class="msgs"&gt;&lt;div class="card-message"&gt;&lt;div class="success"&gt;&lt;h3&gt;Updated&lt;/h3&gt;&lt;i class="fa fa-check-circle fa-3x"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="msg-warning" class="msgs"&gt;&lt;div class="card-message"&gt;&lt;div class="warning"&gt;&lt;h3&gt;You are about to delete. Do you want to proceed?&lt;/h3&gt;&lt;i class="fa fa-exclamation-triangle fa-3x"&gt;&lt;/i&gt;&lt;div class="confirm"&gt;&lt;div class="wrapper"&gt;&lt;div id="yes" class="left"&gt;&lt;button type="button"&gt;yes&lt;/button&gt;&lt;/div&gt;&lt;div id="no" class="right"&gt;&lt;button type="button"&gt;no&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul id="charts-cont" class="img-cont show-pie"&gt;&lt;li class="pie"&gt;&lt;/li&gt;&lt;li class="line"&gt;&lt;/li&gt;&lt;li class="area"&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="mc-footer"&gt;&lt;div class="metadata"&gt;&lt;ul class="info-metadata"&gt;&lt;li&gt;limit x riched&lt;/li&gt;&lt;li&gt;162 updates&lt;/li&gt;&lt;li&gt;monthly resolution&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+  include ./components/components-scripts-test/expander-trigger.scripts.jade
+ script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")

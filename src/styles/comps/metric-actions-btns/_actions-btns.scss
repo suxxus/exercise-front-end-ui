@@ -1,0 +1,12 @@
+.metric-actions-btns {
+    .wrapper {
+        @include outer-container;
+
+        .left {
+            @include span-columns(7);
+        }
+        .right {
+            @include span-columns(5);
+        }
+    }
+}

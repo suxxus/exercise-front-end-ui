@@ -1,0 +1,15 @@
+
+// only for comp demo (not valid for production use)
+script.
+  [].slice.call(document.querySelectorAll('.js-accordion-trigger'))
+    .forEach(function(item){
+        item.addEventListener('click', function(e){
+
+            var accordionTrigger = e.target;
+            if (accordionTrigger.classList){
+                accordionTrigger.nextSibling.classList.toggle('show');
+            }
+            e.preventDefault();
+        });
+    });
+// end

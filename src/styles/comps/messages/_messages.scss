@@ -1,0 +1,43 @@
+.card-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+    h3 {
+        margin: .3em 0;
+    }
+    .success {
+        i {
+            color: #309835;
+        }
+    }
+    .warning {
+        i {
+            color: #DA8222;
+        }
+    }
+    .confirm {
+        background-color: #EFEFEF;
+        border-top: 1px solid #ccc;
+        button {
+            background-color: #c3c3c3;
+            color: #333;
+        }
+        padding: .5em;
+        margin-top: 1em;
+
+        .wrapper {
+            @include outer-container;
+            width: 80px;
+            margin-right: inherit;
+            .left {
+                @include span-columns(6);
+            }
+            .right {
+                @include span-columns(6);
+            }
+        }
+    }
+}

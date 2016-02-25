@@ -1,0 +1,99 @@
+
+//----------------------------------------------------
+//- TEST TRANSITIONS
+//----------------------------------------------------
+// only for comp demo, test interactivity (not valid for production use)
+script.
+
+  function intial(){
+    var msgSuccess = document.querySelector('#msg-success');
+    var msgWarning = document.querySelector('#msg-warning');
+    var target = document.querySelector('#charts-cont');
+
+    if (target.classList){
+        msgSuccess.classList.add ('hide');
+        msgWarning.classList.add ('hide');
+       }
+  }
+
+  document.querySelector('.mc-edit #pie')
+  .addEventListener('click', function(e){
+
+    if (target.classList){
+        msgSuccess.classList.add ('hide');
+        msgWarning.classList.add ('hide');
+        target.classList.remove('show-line');
+        target.classList.remove('show-area');
+        target.classList.toggle('show-pie');
+      }
+  });
+
+  document.querySelector('.mc-edit #line')
+  .addEventListener('click', function(e){
+    var target = document.querySelector('#charts-cont');
+    var msgSuccess = document.querySelector('#msg-success');
+    var msgWarning = document.querySelector('#msg-warning');
+
+    if (target.classList){
+        msgSuccess.classList.add ('hide');
+        msgWarning.classList.add ('hide');
+        target.classList.remove('show-pie');
+        target.classList.remove('show-area');
+        target.classList.toggle('show-line');
+      }
+  });
+
+  document.querySelector('.mc-edit #area')
+  .addEventListener('click', function(e){
+    var target = document.querySelector('#charts-cont');
+    var msgSuccess = document.querySelector('#msg-success');
+    var msgWarning = document.querySelector('#msg-warning');
+
+    if (target.classList){
+        msgSuccess.classList.add ('hide');
+        msgWarning.classList.add ('hide');
+        target.classList.remove('show-pie');
+        target.classList.remove('show-line');
+        target.classList.toggle('show-area');
+      }
+  });
+
+  document.querySelector('.mc-edit #save')
+    .addEventListener('click', function(e){
+          var target = document.querySelector('#msg-success');
+          var chartsCont = document.querySelector('#charts-cont');
+
+          if (target.classList){
+             target.classList.remove ('hide');
+             chartsCont.classList.add('hide');
+        }
+
+        var t = setTimeout(function(){
+
+          target.classList.add ('hide');
+          chartsCont.classList.remove('hide');
+          clearTimeout(t);
+
+        }, 1000);
+  });
+
+  document.querySelector('#delete-metric')
+    .addEventListener('click', function(){
+      var target = document.querySelector('#msg-warning');
+      var chartsCont = document.querySelector('#charts-cont');
+      if(target.classList){
+        chartsCont.classList.add('hide');
+        target.classList.toggle ('hide');
+      }
+
+      var t = setTimeout(function(){
+
+          target.classList.toggle ('hide');
+          chartsCont.classList.remove('hide');
+          clearTimeout(t);
+
+        }, 1000);
+    });
+
+  intial();
+//end

@@ -1,0 +1,102 @@
+mixin htmlcode(source)
+  .expander.html-code-container
+    a.expander-trigger.expander-hidden(href="javascript:void(0)") HTML source
+    .expander-content
+     pre.prettyprint.lang-html
+      code #{source}
+
+extends ./base/base.tpl.jade
+block content
+ div.comps-container
+  h2 componets
+
+  h4.comp-name comp: logo
+  div.comp-wrapper
+   include ./components/logo.tpl.jade
+   +htmlcode('<h1 class="logo">Fun Metrics</h1>')
+
+  h4.comp-name comp: ajax loader
+  div.comp-wrapper
+   include ./components/ajax-loader.tpl.jade
+   +htmlcode('<div class="ajax-loader"></div>')
+
+  h4.comp-name comp: switch-edit
+  div.comp-wrapper
+   include ./components/edit.tpl.jade
+   +htmlcode('<div class="edit-toggle"><span>edit</span><label class="label-switch"><input type="checkbox"/><div class="checkbox"></div></label></div>')
+
+  h4.comp-name comp: user-logged
+  div.comp-wrapper
+   include ./components/user-logged.tpl.jade
+   +htmlcode('<div class="user-logged"><div class="pic-user"><i class="fa fa-user fa-2x"></i><div class="user"><p>m.pelayo@mimail.com</p></div></div></div>')
+
+  h4.comp-name comp: metrics viewer
+  div.comp-wrapper
+   include ./components/metrics-viewer.tpl.jade
+   +htmlcode('<div class="grid-items metrics-viewer"><div class="grid-item"><div class="metric-card"><div class="cards"><div class="card"><div class="card-header">header</div><div class="card-image"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt=""/></div></div></div></div></div></div>')
+
+  h4.comp-name comp: create-new-metric
+  div.comp-wrapper
+   include ./components/create-new-metric.tpl.jade
+   +htmlcode('<div class="tooltip-item new-metric">new metric<div class="tooltip"><p>Click to create new metric</p></div></div>')
+
+  h4.comp-name comp: footer
+  div.comp-wrapper
+   include ./components/footer.tpl.jade
+   +htmlcode('<footer class="footer"><h4>© 2005-2015 Fun Metrics copyright</h4><a href="javascrit:void(0)"> info@metrics.com</a></footer>')
+
+  //- METRIC COMPONENT --//
+  h4.comp-name comp: metrics (subcomponents)
+  div.comp-wrapper
+
+   h4.comp-name comp: name
+   div.comp-wrapper
+    include ./components/metric-subcomp/name.tpl.jade
+    +htmlcode('<div class="metric-name"><div class="name editable show"><span class="label">metric name</span><div><i class="fa fa-pencil-square-o fa-lg"></i></div></div><div class="edit"><input placeholder="metric name"/><div class="tooltip"><i class="fa fa-check-square fa-lg"></i></div></div></div>')
+
+   h4.comp-name comp: label
+   div.comp-wrapper
+    include ./components/metric-subcomp/label.tpl.jade
+    +htmlcode('<div class="metric-name"><div class="name show"><span class="label">metric name</span></div></div>')
+
+   h4.comp-name comp: delete-button
+   div.comp-wrapper
+    include ./components/metric-subcomp/delete-button.tpl.jade
+    +htmlcode('<button id="delete-metric" type="button" class="deletemetric"><i class="fa fa-times"></i></button>')
+
+   h4.comp-name comp: actions-btns
+   div.comp-wrapper
+    include ./components/metric-subcomp/actions-btns.tpl.jade
+    +htmlcode('<div class="metric-actions-btns"><div class="wrapper"><div id="cancel" class="left"><button type="button">cancel</button></div><div id="save" class="right"><button type="button">save</button></div></div></div>')
+
+   h4.comp-name comp: metric-card
+   div.comp-wrapper
+    include ./components/metric-subcomp/metric-card.tpl.jade
+    +htmlcode('<div class="metric-card"><div class="cards"><div class="card"><div class="card-header">header</div><div class="card-image"></div></div></div></div>')
+
+   h4.comp-name comp: message success
+   div.comp-wrapper
+    include ./components/metric-subcomp/message-success.tpl.jade
+    +htmlcode('<div class="card-message"><div class="success"><h3>Updated</h3><i class="fa fa-check-circle fa-3x"></i></div></div>')
+
+   h4.comp-name comp: message warning
+   div.comp-wrapper
+    include ./components/metric-subcomp/message-warning.tpl.jade
+    +htmlcode('<div class="card-message"><div class="warning"><h3>You are about to delete. Do you want to proceed?</h3><i class="fa fa-exclamation-triangle fa-3x"></i><div class="confirm"><div class="wrapper"><div id="yes" class="left"><button type="button">yes</button></div><div id="no" class="right"><button type="button">no</button></div></div></div></div></div>')
+
+   h4.comp-name comp: select chart
+   div.comp-wrapper
+    include ./components/metric-subcomp/select-metric-type-mobile.tpl.jade
+    +htmlcode('<ul class="accordion select-mobile"><li><a href="javascript:void(0)" class="js-accordion-trigger">Select Chart type</a><ul class="submenu"><li id="pie"><a href="javascript:void(0)"><i class="fa fa-pie-chart"></i><span>pie type</span></a></li><li id="line"><a href="javascript:void(0)"><i class="fa fa-line-chart"></i><span>line type</span></a></li><li id="area"><a href="javascript:void(0)"><i class="fa fa-area-chart"></i><span>area type</span></a></li></ul></li></ul>')
+
+   h4.comp-name comp: info
+   div.comp-wrapper
+    include ./components/metric-subcomp/info.tpl.jade
+    +htmlcode('<ul class="info-metadata"><li>limit x riched</li><li>162 updates</li><li>monthly resolution</li></ul>')
+
+ include ./components/components-scripts-test/component-accordion.scripts.jade
+ include ./components/components-scripts-test/expander-trigger.scripts.jade
+
+ script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
+
+block footer

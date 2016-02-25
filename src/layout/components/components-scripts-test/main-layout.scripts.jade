@@ -1,0 +1,31 @@
+
+// only for comp demo (not valid for production use)
+script.
+  function hideAll (id){
+    [].slice.call(document.querySelectorAll(id))
+    .forEach(function(target){
+      if (target.classList){
+        target.classList.add ('hide');
+       }
+    });
+  }
+
+  function init(){
+      ['#msg-success', '#msg-warning', '.grid-items'].forEach(hideAll);
+      var loadingMetrics = document.querySelector('.loading-metrics'),
+          gridItems = document.querySelector('.metrics-viewer');
+
+      loadingMetrics.classList.add('show');
+
+       var t = setTimeout(function(){
+          loadingMetrics.classList.remove ('show');
+          gridItems.classList.remove('hide');
+          clearTimeout(t);
+        }, 1000);
+    }
+
+  init();
+
+// end
+
+

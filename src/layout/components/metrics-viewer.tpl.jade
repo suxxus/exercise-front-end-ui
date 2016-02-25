@@ -1,0 +1,14 @@
+mixin metricBox
+ div.grid-item
+  include ./metric-subcomp/metric-card.tpl.jade
+   block image
+    img(src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="")
+
+//- use
+div.grid-items.metrics-viewer
+ +metricBox
+ +metricBox
+ +metricBox
+ +metricBox
+ +metricBox
+ +metricBox

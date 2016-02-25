@@ -1,0 +1,11 @@
+.edit-toggle {
+    .label-switch input[type="checkbox"]:checked+.checkbox {
+        background: $metrics-violet;
+    }
+    span {
+        margin-right: 10px;
+        font-size: 14px;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+}

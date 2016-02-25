@@ -1,0 +1,37 @@
+.landing{
+
+  padding:20px;
+  padding: 1rem;
+
+  .grid-item a{
+    display: block;
+    height: 100%;
+  }
+
+  .list-items .fa{
+    margin-right: 5px;
+    margin-right: 0.5rem;
+  }
+
+  .repo{
+    margin-bottom: 30px;
+  }
+
+  .especifications li{
+
+    font-size: 10px;
+    font-size: 1.0rem;
+    margin-bottom: 16px;
+  }
+
+  .browser-support li{
+
+    i{
+      color: #808080;
+    }
+
+    float: left;
+    margin-right: 12px;
+    margin-right: 1.2rem;
+  }
+}

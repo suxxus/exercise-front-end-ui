@@ -1,0 +1,56 @@
+    .user-logged {
+        position: relative;
+        .pic-user {
+            i {
+                position: absolute;
+                right: 1px;
+                cursor: pointer;
+                color: $metrics-violet;
+                text-align: right;
+                &:hover ~.user {
+                    @include transition-property(opacity);
+                    @include transition-duration(1.0s);
+                    @include transition-timing-function(ease-in);
+                    opacity: 1;
+                }
+            }
+            .user {
+                position: absolute;
+                top: 30px;
+                right: 1px;
+                background-color: $metrics-violet;
+                opacity: 0;
+                p {
+                    font-size: 11px;
+                    font-size: 1.1rem;
+                    margin: 0;
+                    padding: 6px;
+                    color: #fff;
+                }
+            }
+        }
+        @media (min-width: 600px) {
+            .pic-user {
+                i {
+                    font-size: 25px;
+                    font-size: 2.5rem;
+                    cursor: inherit;
+                    left: 1px;
+                    top: 19px
+                }
+                .user {
+
+                    right: 35px;
+                    background-color: inherit;
+                    opacity: 1;
+                    top: 12px;
+                    display: block;
+
+                    p{
+                      font-size: inherit;
+                      color: $metrics-violet;
+                    }
+                }
+            }
+        }
+    }

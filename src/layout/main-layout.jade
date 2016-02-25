@@ -1,0 +1,36 @@
+mixin metricBox
+ div.grid-item
+  include ./components/metrics-component/metric-component.tpl.jade
+
+extends ./base/base.tpl.jade
+block content
+ div.main-layout
+  div.header-cont
+    div.left
+     include ./components/logo.tpl.jade
+    div.right
+     include ./components/user-logged.tpl.jade
+  div.body-cont
+
+   div.edit-cont
+    div.left
+     include ./components/create-new-metric.tpl.jade
+    div.right
+     include ./components/edit.tpl.jade
+
+   div.loading-metrics
+    p
+    .ajax-loader
+
+   div.grid-items.metrics-viewer
+    +metricBox
+    +metricBox
+    +metricBox
+    +metricBox
+    +metricBox
+    +metricBox
+
+   include ./components/components-scripts-test/main-layout.scripts.jade
+
+block footer
+ include ./components/footer.tpl.jade

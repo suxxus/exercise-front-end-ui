@@ -1,0 +1,42 @@
+.metric-name {
+    input:focus {
+        background-color: #FBA7FF;
+    }
+    .tooltip-item {
+        border: 0;
+        cursor: pointer;
+        i {
+            width: 90px;
+            text-align: left;
+        }
+    }
+    .name.editable:hover {
+        font-weight: 900;
+    }
+    .name,
+    .edit {
+        display: none;
+        div {
+            display: inline;
+            padding: .7em
+        }
+        .span {
+            font-size: 18px;
+            font-size: 1.8rem;
+            margin-right: 10px;
+        }
+    }
+    .name.editable,
+    .edit {
+        cursor: pointer;
+    }
+    .name {
+        width: 140px;
+    }
+    .edit {
+        width: 170px;
+        input {
+            width: 130px;
+        }
+    }
+}

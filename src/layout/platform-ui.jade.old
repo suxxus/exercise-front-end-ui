@@ -1,0 +1,7 @@
+extends ./base/base.tpl.jade
+block content
+ div#platform-ui
+
+block footer
+ include ./components/footer.tpl.jade
+ script(src="./scripts/app-bundle.js")
