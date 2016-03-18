@@ -15,36 +15,49 @@
       margin-left: 20px;
       margin-bottom: 30px;
       border: 1px solid #ccc;
-
-      .footer{
-        position: inherit;
+      .footer {
+          position: inherit;
       }
   }
 
-  .comp-wrapper.metrics-component{
-    width: 260px;
-    margin: 0 auto;
+  .comp-wrapper {
+
+      .metrics-modal-cont {
+           position: relative;
+
+          height: 200px;
+
+          > p {
+              text-align: center;
+          }
+
+          .modal-behavior {
+              position: absolute;
+              top: 200px;
+          }
+      }
+  }
+
+  .comp-wrapper.metrics-component {
+      width: 260px;
+      margin: 0 auto;
   }
 
   .html-code-container {
-
       width: inherit;
       margin-top: 40px;
-
-      .prettyprint{
-        border: #ECECEC;
+      .prettyprint {
+          border: #ECECEC;
       }
-
       .expander-trigger {
           font-size: .8em;
           border-top: 1px solid #DDD;
           border-bottom: inherit;
       }
-
       .expander-content {
           padding: 5px;
-          code{
-            font-size: .7em;
+          code {
+              font-size: .7em;
           }
       }
   }

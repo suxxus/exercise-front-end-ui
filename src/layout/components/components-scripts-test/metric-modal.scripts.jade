@@ -1,0 +1,29 @@
+
+// only for comp demo (not valid for production use)
+script.
+  (function(){
+
+     var modalBkg = document.querySelector('.modal-bkg'),
+         modalDialog = document.querySelector('.modal-dialog'),
+         showModal = document.querySelector('.show-modal'),
+         confirmsBtns = document.querySelectorAll('.confirm button'),
+
+         showModalClickListener = function(e) {
+              modalBkg.classList.add('show');
+              modalDialog.classList.add('modal-dialog-transition');
+              modalDialog.setAttribute('style', 'transform: translateY(250px);');
+              e.preventDefault();
+          };
+
+          showModal.addEventListener('click', showModalClickListener);
+
+          [].slice.call(confirmsBtns)
+            .forEach(function(btn){
+                btn.addEventListener('click', function(){
+                  modalBkg.classList.remove('show');
+                  modalDialog.classList.remove('modal-dialog-transition');
+                  modalDialog.setAttribute('style', '');
+                });
+            });
+  })();
+// end

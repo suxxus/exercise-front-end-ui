@@ -1,0 +1,33 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.modal-bkg {
+  background: rgba(187, 42, 42, .5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  display: none;
+}
+
+.modal-dialog {
+  font-size: .75em;
+  background: rgb(255, 255, 255);
+  display: block;
+  padding: 5px;
+  position: absolute;
+  margin-left: -174px;
+  top: -200px;
+  left: 50%;
+  z-index: 20;
+}
+
+.modal-dialog-transition {
+  transition: all 300ms ease-in-out;
+}

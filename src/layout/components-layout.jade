@@ -79,11 +79,6 @@ block content
     include ./components/metric-subcomp/message-success.tpl.jade
     +htmlcode('<div class="card-message"><div class="success"><h3>Updated</h3><i class="fa fa-check-circle fa-3x"></i></div></div>')
 
-   h4.comp-name comp: message warning
-   div.comp-wrapper
-    include ./components/metric-subcomp/message-warning.tpl.jade
-    +htmlcode('<div class="card-message"><div class="warning"><h3>You are about to delete. Do you want to proceed?</h3><i class="fa fa-exclamation-triangle fa-3x"></i><div class="confirm"><div class="wrapper"><div id="yes" class="left"><button type="button">yes</button></div><div id="no" class="right"><button type="button">no</button></div></div></div></div></div>')
-
    h4.comp-name comp: select chart
    div.comp-wrapper
     include ./components/metric-subcomp/select-metric-type-mobile.tpl.jade
@@ -94,8 +89,18 @@ block content
     include ./components/metric-subcomp/info.tpl.jade
     +htmlcode('<ul class="info-metadata"><li>limit x riched</li><li>162 updates</li><li>monthly resolution</li></ul>')
 
+   h4.comp-name comp: modal
+   div.comp-wrapper.comp-wrapper
+    .metrics-modal-cont
+      p Lorem ipsum dolor sit amet.
+      include ./components/metric-subcomp/metric-modal.tpl.jade
+      a(href="javascript:void(0);" class="modal-behavior show-modal") show modal
+
+    +htmlcode('<div class="modal"><div class="modal-bkg"></div><div style="" id="msg-warning" class="msgs modal-dialog"><div class="card-message"><div class="warning"><h3>You are about to delete. Do you want to proceed?</h3><i class="fa fa-exclamation-triangle fa-3x"></i><div class="confirm"><div class="wrapper"><div id="yes" class="left"><button type="button">yes</button></div><div id="no" class="right"><button type="button">no</button></div></div></div></div></div></div></div>')
+
  include ./components/components-scripts-test/component-accordion.scripts.jade
  include ./components/components-scripts-test/expander-trigger.scripts.jade
+ include ./components/components-scripts-test/metric-modal.scripts.jade
 
  script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
 
