@@ -23,17 +23,56 @@ block content
   h4.comp-name comp: switch-edit
   div.comp-wrapper
    include ./components/edit.tpl.jade
-   +htmlcode('<div class="edit-toggle"><span>edit</span><label class="label-switch"><input type="checkbox"/><div class="checkbox"></div></label></div>')
+   .expander.html-code-container
+    a.expander-trigger.expander-hidden(href="javascript:void(0)") HTML source
+    .expander-content
+     pre.prettyprint.lang-html
+      code
+        | &lt;div class=&quot;edit-toggle&quot;&gt; &lt;span&gt;edit&lt;/span&gt;
+        |   &lt;label class=&quot;label-switch&quot;&gt;
+        |     &lt;input type=&quot;checkbox&quot;/&gt;
+        |     &lt;div class=&quot;checkbox&quot;&gt;&lt;/div&gt;
+        |   &lt;/label&gt;
+        | &lt;/div&gt;
+
 
   h4.comp-name comp: user-logged
   div.comp-wrapper
    include ./components/user-logged.tpl.jade
-   +htmlcode('<div class="user-logged"><div class="pic-user"><i class="fa fa-user fa-2x"></i><div class="user"><p>m.pelayo@mimail.com</p></div></div></div>')
+   .expander.html-code-container
+    a.expander-trigger.expander-hidden(href="javascript:void(0)") HTML source
+    .expander-content
+     pre.prettyprint.lang-html
+      code
+        | &lt;div class=&quot;user-logged&quot;&gt;
+        |   &lt;div class=&quot;pic-user&quot;&gt;&lt;i class=&quot;fa fa-user fa-2x&quot;&gt;&lt;/i&gt;
+        |     &lt;div class=&quot;user&quot;&gt;
+        |       &lt;p&gt;m.pelayo@mimail.com&lt;/p&gt;
+        |     &lt;/div&gt;
+        |   &lt;/div&gt;
+        | &lt;/div&gt;
 
   h4.comp-name comp: metrics viewer
   div.comp-wrapper
    include ./components/metrics-viewer.tpl.jade
-   +htmlcode('<div class="grid-items metrics-viewer"><div class="grid-item"><div class="metric-card"><div class="cards"><div class="card"><div class="card-header">header</div><div class="card-image"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt=""/></div></div></div></div></div></div>')
+   .expander.html-code-container
+    a.expander-trigger.expander-hidden(href="javascript:void(0)") HTML source
+    .expander-content
+     pre.prettyprint.lang-html
+      code
+        | &lt;div class=&quot;grid-items metrics-viewer&quot;&gt;
+        |   &lt;div class=&quot;grid-item&quot;&gt;
+        |     &lt;div class=&quot;metric-card&quot;&gt;
+        |       &lt;div class=&quot;cards&quot;&gt;
+        |         &lt;div class=&quot;card&quot;&gt;
+        |           &lt;div class=&quot;card-header&quot;&gt;header&lt;/div&gt;
+        |           &lt;div class=&quot;card-image&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot; alt=&quot;&quot;/&gt;
+        |         &lt;/div&gt;
+        |       &lt;/div&gt;
+        |     &lt;/div&gt;
+        |   &lt;/div&gt;
+        | &lt;/div&gt;
+
 
   h4.comp-name comp: create-new-metric
   div.comp-wrapper
@@ -52,7 +91,20 @@ block content
    h4.comp-name comp: name
    div.comp-wrapper
     include ./components/metric-subcomp/name.tpl.jade
-    +htmlcode('<div class="metric-name"><div class="name editable show"><span class="label">metric name</span><div><i class="fa fa-pencil-square-o fa-lg"></i></div></div><div class="edit"><input placeholder="metric name"/><div class="tooltip"><i class="fa fa-check-square fa-lg"></i></div></div></div>')
+    .expander.html-code-container
+      a.expander-trigger.expander-hidden(href="javascript:void(0)") HTML source
+      .expander-content
+       pre.prettyprint.lang-html
+        code
+          | &lt;div class=&quot;metric-name&quot;&gt;
+          |   &lt;div class=&quot;name editable show&quot;&gt;&lt;span class=&quot;label&quot;&gt;metric name&lt;/span&gt;
+          |     &lt;div&gt;&lt;i class=&quot;fa fa-pencil-square-o fa-lg&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class=&quot;edit&quot;&gt;
+          |     &lt;input placeholder=&quot;metric name&quot;/&gt;
+          |     &lt;div class=&quot;tooltip&quot;&gt;&lt;i class=&quot;fa fa-check-square fa-lg&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
 
    h4.comp-name comp: label
    div.comp-wrapper
@@ -67,7 +119,23 @@ block content
    h4.comp-name comp: actions-btns
    div.comp-wrapper
     include ./components/metric-subcomp/actions-btns.tpl.jade
-    +htmlcode('<div class="metric-actions-btns"><div class="wrapper"><div id="cancel" class="left"><button type="button">cancel</button></div><div id="save" class="right"><button type="button">save</button></div></div></div>')
+    .expander.html-code-container
+      a.expander-trigger.expander-hidden(href="javascript:void(0)") HTML source
+      .expander-content
+       pre.prettyprint.lang-html
+        code
+          | &lt;div class=&quot;metric-actions-btns&quot;&gt;
+          |   &lt;div class=&quot;wrapper&quot;&gt;
+          |     &lt;div id=&quot;cancel&quot; class=&quot;left&quot;&gt;
+          |       &lt;button type=&quot;button&quot;&gt;cancel&lt;/button&gt;
+          |     &lt;/div&gt;
+          |     &lt;div id=&quot;save&quot; class=&quot;right&quot;&gt;
+          |       &lt;button type=&quot;button&quot;&gt;save&lt;/button&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+
 
    h4.comp-name comp: metric-card
    div.comp-wrapper
@@ -82,7 +150,20 @@ block content
    h4.comp-name comp: select chart
    div.comp-wrapper
     include ./components/metric-subcomp/select-metric-type-mobile.tpl.jade
-    +htmlcode('<ul class="accordion select-mobile"><li><a href="javascript:void(0)" class="js-accordion-trigger">Select Chart type</a><ul class="submenu"><li id="pie"><a href="javascript:void(0)"><i class="fa fa-pie-chart"></i><span>pie type</span></a></li><li id="line"><a href="javascript:void(0)"><i class="fa fa-line-chart"></i><span>line type</span></a></li><li id="area"><a href="javascript:void(0)"><i class="fa fa-area-chart"></i><span>area type</span></a></li></ul></li></ul>')
+    .expander.html-code-container
+      a.expander-trigger.expander-hidden(href="javascript:void(0)") HTML source
+      .expander-content
+       pre.prettyprint.lang-html
+        code
+          | &lt;ul class=&quot;accordion select-mobile&quot;&gt;
+          |   &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot; class=&quot;js-accordion-trigger&quot;&gt;Select Chart type&lt;/a&gt;
+          |     &lt;ul class=&quot;submenu&quot;&gt;
+          |       &lt;li id=&quot;pie&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;&lt;i class=&quot;fa fa-pie-chart&quot;&gt;&lt;/i&gt;&lt;span&gt;pie type&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+          |       &lt;li id=&quot;line&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;&lt;i class=&quot;fa fa-line-chart&quot;&gt;&lt;/i&gt;&lt;span&gt;line type&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+          |       &lt;li id=&quot;area&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;&lt;i class=&quot;fa fa-area-chart&quot;&gt;&lt;/i&gt;&lt;span&gt;area type&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+          |     &lt;/ul&gt;
+          |   &lt;/li&gt;
+          | &lt;/ul&gt;
 
    h4.comp-name comp: info
    div.comp-wrapper
@@ -94,9 +175,33 @@ block content
     .metrics-modal-cont
       p Lorem ipsum dolor sit amet.
       include ./components/metric-subcomp/metric-modal.tpl.jade
-      a(href="javascript:void(0);" class="modal-behavior show-modal") show modal
 
-    +htmlcode('<div class="modal"><div class="modal-bkg"></div><div style="" id="msg-warning" class="msgs modal-dialog"><div class="card-message"><div class="warning"><h3>You are about to delete. Do you want to proceed?</h3><i class="fa fa-exclamation-triangle fa-3x"></i><div class="confirm"><div class="wrapper"><div id="yes" class="left"><button type="button">yes</button></div><div id="no" class="right"><button type="button">no</button></div></div></div></div></div></div></div>')
+    a(href="javascript:void(0);" class="modal-behavior show-modal") show modal
+    .expander.html-code-container
+        a.expander-trigger.expander-hidden(href="javascript:void(0)") HTML source
+        .expander-content
+         pre.prettyprint.lang-html
+          code
+            | &lt;div class=&quot;modal&quot;&gt;
+            |   &lt;div class=&quot;modal-bkg&quot;&gt;&lt;/div&gt;
+            |   &lt;div style=&quot;&quot; id=&quot;msg-warning&quot; class=&quot;msgs modal-dialog&quot;&gt;
+            |     &lt;div class=&quot;card-message&quot;&gt;
+            |       &lt;div class=&quot;warning&quot;&gt;
+            |         &lt;h3&gt;You are about to delete. Do you want to proceed?&lt;/h3&gt;&lt;i class=&quot;fa fa-exclamation-triangle fa-3x&quot;&gt;&lt;/i&gt;
+            |         &lt;div class=&quot;confirm&quot;&gt;
+            |           &lt;div class=&quot;wrapper&quot;&gt;
+            |             &lt;div id=&quot;yes&quot; class=&quot;left&quot;&gt;
+            |               &lt;button type=&quot;button&quot;&gt;yes&lt;/button&gt;
+            |             &lt;/div&gt;
+            |             &lt;div id=&quot;no&quot; class=&quot;right&quot;&gt;
+            |               &lt;button type=&quot;button&quot;&gt;no&lt;/button&gt;
+            |             &lt;/div&gt;
+            |           &lt;/div&gt;
+            |         &lt;/div&gt;
+            |      &lt;/div&gt;
+            |     &lt;/div&gt;
+            |   &lt;/div&gt;
+            | &lt;/div&gt;
 
  include ./components/components-scripts-test/component-accordion.scripts.jade
  include ./components/components-scripts-test/expander-trigger.scripts.jade
