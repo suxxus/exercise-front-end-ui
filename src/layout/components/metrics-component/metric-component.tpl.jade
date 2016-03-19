@@ -1,5 +1,5 @@
 div.metric-component
-
+  include ../metric-subcomp/metric-modal.tpl.jade
   div.mc-header
    div.right.show
     include ../metric-subcomp/label.tpl.jade
@@ -20,9 +20,6 @@ div.metric-component
      div#msg-success.msgs
       include ../metric-subcomp/message-success.tpl.jade
 
-     //- div#msg-warning.msgs
-     //-  include ../metric-subcomp/message-warning.tpl.jade
-
      ul#charts-cont.img-cont.show-pie
       li.pie
       li.line
@@ -31,3 +28,5 @@ div.metric-component
   div.mc-footer
    div.metadata
     include ../metric-subcomp/info.tpl.jade
+
+include ../components-scripts-test/metric-modal.scripts.jade

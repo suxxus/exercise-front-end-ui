@@ -3,24 +3,30 @@
 script.
   (function(){
 
-     var modalBkg = document.querySelector('.modal-bkg'),
+     var modal = document.querySelector('.modal'),
          modalDialog = document.querySelector('.modal-dialog'),
          showModal = document.querySelector('.show-modal'),
+         deleteBtn = document.querySelector('#delete-metric'),
          confirmsBtns = document.querySelectorAll('.confirm button'),
+         listener = showModal ? showModal : deleteBtn;
 
          showModalClickListener = function(e) {
-              modalBkg.classList.add('show');
+            modal.classList.add('show');
+            setTimeout(function(){
               modalDialog.classList.add('modal-dialog-transition');
-              modalDialog.setAttribute('style', 'transform: translateY(250px);');
-              e.preventDefault();
+              modalDialog.setAttribute('style', 'transform: translateY(290px);');
+            },10);
+
+            e.preventDefault();
           };
 
-          showModal.addEventListener('click', showModalClickListener);
+
+          listener.addEventListener('click', showModalClickListener);
 
           [].slice.call(confirmsBtns)
             .forEach(function(btn){
                 btn.addEventListener('click', function(){
-                  modalBkg.classList.remove('show');
+                  modal.classList.remove('show');
                   modalDialog.classList.remove('modal-dialog-transition');
                   modalDialog.setAttribute('style', '');
                 });

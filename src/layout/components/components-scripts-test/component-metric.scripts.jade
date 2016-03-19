@@ -7,12 +7,10 @@ script.
 
   function intial(){
     var msgSuccess = document.querySelector('#msg-success');
-    var msgWarning = document.querySelector('#msg-warning');
     var target = document.querySelector('#charts-cont');
 
     if (target.classList){
         msgSuccess.classList.add ('hide');
-        msgWarning.classList.add ('hide');
        }
   }
 
@@ -76,25 +74,6 @@ script.
 
         }, 1000);
   });
-
-  document.querySelector('#delete-metric')
-    .addEventListener('click', function(){
-      console.log('remove component');
-      //- var target = document.querySelector('#msg-warning');
-      //- var chartsCont = document.querySelector('#charts-cont');
-      //- if(target.classList){
-      //-   chartsCont.classList.add('hide');
-      //-   target.classList.toggle ('hide');
-      //- }
-
-      //- var t = setTimeout(function(){
-
-      //-     target.classList.toggle ('hide');
-      //-     chartsCont.classList.remove('hide');
-      //-     clearTimeout(t);
-
-      //-   }, 1000);
-    });
 
   intial();
 //end
