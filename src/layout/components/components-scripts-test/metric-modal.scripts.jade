@@ -13,8 +13,7 @@ script.
          showModalClickListener = function(e) {
             modal.classList.add('show');
             setTimeout(function(){
-              modalDialog.classList.add('modal-dialog-transition');
-              modalDialog.setAttribute('style', 'transform: translateY(290px);');
+              modalDialog.classList.add('modal-dialog-transition', 'modal-dialog-transform');
             },10);
 
             e.preventDefault();
@@ -27,8 +26,7 @@ script.
             .forEach(function(btn){
                 btn.addEventListener('click', function(){
                   modal.classList.remove('show');
-                  modalDialog.classList.remove('modal-dialog-transition');
-                  modalDialog.setAttribute('style', '');
+                  modalDialog.classList.remove('modal-dialog-transition', 'modal-dialog-transform');
                 });
             });
   })();

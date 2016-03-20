@@ -26,5 +26,9 @@
 }
 
 .modal-dialog-transition {
-    transition: all 300ms ease-in-out;
+    @include transition(all 300ms ease-in-out);
+}
+
+.modal-dialog-transform {
+    @include transform(translateY(290px));
 }
