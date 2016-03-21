@@ -11,7 +11,7 @@ script.
          listener = showModal ? showModal : deleteBtn;
 
          showModalClickListener = function(e) {
-            modal.classList.add('opacity-show');
+            modal.classList.add('display-modal');
             modalDialog.classList.add('modal-dialog-transition', 'modal-dialog-transform');
 
             e.preventDefault();
@@ -23,7 +23,7 @@ script.
           [].slice.call(confirmsBtns)
             .forEach(function(btn){
                 btn.addEventListener('click', function(){
-                  modal.classList.remove('opacity-show');
+                  modal.classList.remove('display-modal');
                   modalDialog.classList.remove('modal-dialog-transition', 'modal-dialog-transform');
                 });
             });
