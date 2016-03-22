@@ -1,4 +1,4 @@
-# Platform-ui exercise
+# Platform-ui
 ***personal exercise to study front-end development technologies***
 
 ## This is part of platform-ui-app:
