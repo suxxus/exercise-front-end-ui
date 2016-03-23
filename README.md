@@ -6,7 +6,7 @@
 
 ## Clone the repo & install:
 ```
-git clone git@github.com:suxxus/exercise-front-end-ui.git
+git clone https://github.com/suxxus/exercise-front-end-ui.git
 npm install
 ```
 ## Scripts:
