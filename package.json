@@ -11,24 +11,24 @@
     "dev": "gulp dev",
     "dist": "gulp dist",
     "check": "npm outdated --depth=0",
-    "postinstall": "gulp dist"
+    "prepublish": "gulp dist"
   },
   "author": "DIEGO <diegoriez@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "express": "^4.13.4",
-    "gulp": "^3.9.1",
-    "gulp-jade": "^1.1.0",
-    "gulp-rimraf": "^0.2.0",
-    "gulp-sass": "^2.2.0",
-    "gulp-watch": "^4.3.5",
-    "path": "^0.12.7",
-    "run-sequence": "^1.1.5"
+    "browser-sync": "2.11.2",
+    "express": "4.13.4",
+    "gulp": "3.9.1",
+    "gulp-jade": "1.1.0",
+    "gulp-rimraf": "0.2.0",
+    "gulp-sass": "2.2.0",
+    "gulp-watch": "4.3.5",
+    "path": "0.12.7",
+    "run-sequence": "1.1.5"
   },
   "dependencies": {
-    "bourbon": "^4.2.6",
-    "node-neat": "^1.7.2"
+    "node-neat": "1.7.2",
+    "bourbon": "4.2.6",
   },
   "engines": {
     "node": "5.0"
