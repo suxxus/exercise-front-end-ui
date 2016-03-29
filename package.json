@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "node-neat": "1.7.2",
-    "bourbon": "4.2.6",
+    "bourbon": "4.2.6"
   },
   "engines": {
     "node": "5.0"
