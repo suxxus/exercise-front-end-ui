@@ -6,9 +6,13 @@ block content
  div.comp-wrapper.metrics-component
   include ./components/metrics-component/metric-component.tpl.jade
 
-  include ./components/components-scripts-test/component-metric.scripts.jade
+  //- scripts for testing
 
+  include ./components/components-scripts-test/component-metric.scripts.jade
+  include ./components/components-scripts-test/metric-modal.scripts.jade
   include ./components/components-scripts-test/component-accordion.scripts.jade
+  include ./components/components-scripts-test/component-name.scripts.jade
+
 
 block footer
  .expander.html-code-container
@@ -111,5 +115,5 @@ block footer
 
       | &lt;/div&gt;
 
-  include ./components/components-scripts-test/expander-trigger.scripts.jade
+ include ./components/components-scripts-test/expander-trigger.scripts.jade
  script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")

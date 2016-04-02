@@ -1,79 +1,62 @@
-
-//----------------------------------------------------
-//- TEST TRANSITIONS
-//----------------------------------------------------
 // only for comp demo, test interactivity (not valid for production use)
 script.
+  (function(){
 
-  function intial(){
-    var msgSuccess = document.querySelector('#msg-success');
-    var target = document.querySelector('#charts-cont');
+     var msgSuccess = document.querySelector('#msg-success');
+     var chartsContainer = document.querySelector('#charts-cont');
+     var saveBtn = document.querySelector('.mc-edit #save');
+     var charts = ['#pie', '#line', '#area'];
+     var chartsClassList = ['show-pie', 'show-line', 'show-area'];
 
-    if (target.classList){
-        msgSuccess.classList.add ('hide');
+     var toggleMsgSuccess = function (){
+       if (msgSuccess.classList){
+          msgSuccess.classList.toggle ('hide');
        }
-  }
+     };
 
-  document.querySelector('.mc-edit #pie')
-  .addEventListener('click', function(e){
+    var removeChartsClassLists = function(){
+      chartsClassList.forEach(function(item){
+          chartsContainer.classList.remove(item);
+      });
+    };
 
-    if (target.classList){
-        msgSuccess.classList.add ('hide');
-        msgWarning.classList.add ('hide');
-        target.classList.remove('show-line');
-        target.classList.remove('show-area');
-        target.classList.toggle('show-pie');
-      }
-  });
-
-  document.querySelector('.mc-edit #line')
-  .addEventListener('click', function(e){
-    var target = document.querySelector('#charts-cont');
-    var msgSuccess = document.querySelector('#msg-success');
-    var msgWarning = document.querySelector('#msg-warning');
-
-    if (target.classList){
-        msgSuccess.classList.add ('hide');
-        msgWarning.classList.add ('hide');
-        target.classList.remove('show-pie');
-        target.classList.remove('show-area');
-        target.classList.toggle('show-line');
-      }
-  });
-
-  document.querySelector('.mc-edit #area')
-  .addEventListener('click', function(e){
-    var target = document.querySelector('#charts-cont');
-    var msgSuccess = document.querySelector('#msg-success');
-    var msgWarning = document.querySelector('#msg-warning');
-
-    if (target.classList){
-        msgSuccess.classList.add ('hide');
-        msgWarning.classList.add ('hide');
-        target.classList.remove('show-pie');
-        target.classList.remove('show-line');
-        target.classList.toggle('show-area');
-      }
-  });
-
-  document.querySelector('.mc-edit #save')
-    .addEventListener('click', function(e){
-          var target = document.querySelector('#msg-success');
-          var chartsCont = document.querySelector('#charts-cont');
-
-          if (target.classList){
-             target.classList.remove ('hide');
-             chartsCont.classList.add('hide');
+    var clickEventListener = function(value) {
+      return function (){
+        if(chartsContainer.classList){
+          msgSuccess.classList.add ('hide');
+          removeChartsClassLists();
+          chartsContainer.classList.add(value);
         }
+      }
+     };
+
+     var closeAccordion = function(){
+       var accordionTrigger = document.querySelector('.js-accordion-trigger');
+        accordionTrigger.click();
+     };
+
+     var saveBtnClickListener = function(){
+
+        closeAccordion();
+        chartsContainer.classList.toggle('hide');
+        toggleMsgSuccess();
 
         var t = setTimeout(function(){
-
-          target.classList.add ('hide');
-          chartsCont.classList.remove('hide');
-          clearTimeout(t);
-
+          toggleMsgSuccess();
+          chartsContainer.classList.toggle('hide');
         }, 1000);
-  });
+     };
 
-  intial();
-//end
+     var addChartsListeners = function(){
+        charts.forEach(function(item, idx){
+          document.querySelector('.mc-edit ' + item)
+            .addEventListener('click', clickEventListener(chartsClassList[idx]));
+        });
+     };
+
+     saveBtn.addEventListener('click', saveBtnClickListener);
+
+     addChartsListeners();
+     toggleMsgSuccess();
+
+  }());

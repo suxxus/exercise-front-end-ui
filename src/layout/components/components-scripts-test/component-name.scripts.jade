@@ -1,27 +1,31 @@
 //- TEST ------------------------------------------
 // only for comp demo (not valid for production use)
 script.
- document.querySelector('.metric-name .name')
-  .addEventListener('click', function(e){
+  (function(){
 
-    var _name = e.currentTarget;
-    var edit = document.querySelector('.metric-name .edit');
+    document.querySelector('.metric-name .name')
+      .addEventListener('click', function(e){
 
-    if (edit.classList){
-        _name.classList.toggle ('show');
-        edit.classList.toggle ('show');
-    }
-  });
+      var _name = e.currentTarget;
+      var edit = document.querySelector('.metric-name .edit');
 
-  document.querySelector('.metric-name .edit .tooltip')
-  .addEventListener('click', function(e){
+        if (edit.classList){
+            _name.classList.toggle ('show');
+            edit.classList.toggle ('show');
+        }
+    });
 
-    var edit = document.querySelector('.metric-name .edit');
-    var _name = document.querySelector('.metric-name .name');
+    document.querySelector('.metric-name .edit .tooltip')
+      .addEventListener('click', function(e){
 
-    if (edit.classList){
-        _name.classList.toggle ('show');
-        edit.classList.toggle ('show');
-    }
-  });
+      var edit = document.querySelector('.metric-name .edit');
+      var _name = document.querySelector('.metric-name .name');
+
+      if (edit.classList){
+          _name.classList.toggle ('show');
+          edit.classList.toggle ('show');
+      }
+    });
+
+    }());
 // end

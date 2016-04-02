@@ -1,7 +1,8 @@
 
 // only for comp demo (not valid for production use)
 script.
-  [].slice.call(document.querySelectorAll('.expander-trigger'))
+  (function(){
+    [].slice.call(document.querySelectorAll('.expander-trigger'))
     .forEach(function(elm){
       elm.addEventListener('click', function(){
         var target = this;
@@ -10,4 +11,5 @@ script.
         }
       });
     });
+  }());
 // end

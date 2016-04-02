@@ -1,15 +1,18 @@
 
 // only for comp demo (not valid for production use)
 script.
-  [].slice.call(document.querySelectorAll('.js-accordion-trigger'))
-    .forEach(function(item){
-        item.addEventListener('click', function(e){
+  (function(){
 
-            var accordionTrigger = e.target;
-            if (accordionTrigger.classList){
-                accordionTrigger.nextSibling.classList.toggle('show');
-            }
-            e.preventDefault();
+    var accordionTrigger = document.querySelector('.js-accordion-trigger');
+    var accordionTriggerSubmenu = document.querySelector('.accordion .submenu');
+
+    accordionTrigger.addEventListener('click', function(e){
+
+        if (accordionTrigger.classList){
+              accordionTriggerSubmenu.classList.toggle('show');
+          }
+          e.preventDefault();
         });
-    });
+
+  }());
 // end
