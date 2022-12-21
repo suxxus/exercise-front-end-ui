@@ -1,0 +1,16 @@
+version: "0"
+name: frontend
+services:
+  frontend:
+    image: frontendi-ui
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: exercise-frontend-ui
+    volumes:
+      - .:/app
+      - ./src:/app
+      - ./server:/app
+      - ./node_modules:/app
+    ports:
+      - "3518:5000"
