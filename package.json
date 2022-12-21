@@ -13,7 +13,7 @@
     "check": "npm outdated --depth=0",
     "prepublish": "gulp dist"
   },
-  "author": "DIEGO <diegoriez@gmail.com>",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "2.11.0",
